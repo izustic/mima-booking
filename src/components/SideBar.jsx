@@ -1,6 +1,6 @@
 import React from 'react'
-import Profile from '../components/Profile'
-import Menu from '../components/Menu'
+import Profile from './Profile'
+import Menu from './Menu'
 
 const SideBar = () => {
   return (
