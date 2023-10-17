@@ -6,7 +6,7 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
 	font-family: "Poppins", sans-serif;
 }
 .home {
@@ -138,6 +138,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
+  overflow: scroll;
 }
 
 .nav-bar {
@@ -204,7 +205,7 @@ body {
   position: relative;
   flex-direction: column;
   align-items: center;
-  height: 250px;
+  height: 210px;
   margin-right: 20px;
 }
 .hero .hero-img{
@@ -221,7 +222,7 @@ body {
   position: absolute;
   background-color: #fff;
   bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   width: 90%;
   padding: 20px;
   border-radius: 20px;
@@ -260,6 +261,193 @@ body {
   padding: 15px 30px;
   background-color: #4a4e73;
   color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.trending .trending-header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.trending .trending-header p{
+  font-size: 20px;
+  color: #2d3253;
+}
+.trending .trending-header div {
+  display: flex;
+  gap: 10px;
+}
+
+.trending .trending-header div > svg:first-child{
+  font-size: 8px;
+  color: #2d3253;
+  background-color: #fff;
+  border: 1px solid #adb6c5;
+  padding: 7px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.trending .trending-header div > svg:nth-child(2){
+  font-size: 8px;
+  color: #fff;
+  background-color: #2d3253;
+  padding: 7px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.trending .trending-cards{
+  display: flex;
+  padding: 20px 10px;
+  padding-left: 0px;
+  gap: 20px;
+}
+.trending-cards .trending-card{
+  display: flex;
+  background-color: #fff;
+  width: 35%;
+  gap: 15px;
+  padding: 20px 15px;
+  border-radius: 15px;
+}
+.trending-card .trending-img {
+  width: 50%;
+  display: flex;
+  height: 100px;
+}
+.trending-cards .trending-card .trending-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.trending-card .trending-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.trending-card .trending-details .trending-city{
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.trending-card .trending-details .trending-city div{
+  display: flex;
+  gap: 5px;
+}
+.trending-card .trending-details .trending-city h3{
+  font-size: 16px;
+  color: #303745;
+}
+.trending-card .trending-details .trending-city div p{
+  font-size: 12px;
+  color: #303745;
+}
+.trending-card .trending-details .trending-city div > svg{
+  color: #f49f31;
+  cursor: pointer;
+}
+
+.trending-card .trending-details p{
+  font-size: 12px;
+  color: #adb6c5;
+}
+.trending-card .trending-details .price{
+  font-size: 16px;
+  color: #303745;
+}
+
+.trending .trend-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+.trending .trend-pagination .dott{
+  width: 10px;
+	height: 10px;
+  background-color: #dadada;
+	border-radius: 50%;
+  cursor: pointer;
+}
+.trending .trend-pagination .dott.active{
+  width: 13px;
+  height: 13px;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.trending .best-cards{
+  display: flex;
+  padding: 20px 10px;
+  padding-left: 0px;
+  gap: 20px;
+}
+.best-cards .best-card{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  width: 20%;
+  gap: 15px;
+  height: 300px;
+  padding: 20px 15px;
+  border-radius: 15px;
+}
+.best-card .best-img {
+  width: 100%;
+  display: flex;
+  height: 120px;
+}
+.best-cards .best-card .best-img img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.best-cards .best-card .best-details{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 10px;
+  padding: 10px 0px;
+}
+
+.best-cards .best-card .best-details h3{
+  font-size: 16px;
+}
+.best-cards .best-card .best-details .best-mid {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #adb6c5;
+  font-size: 11px;
+}
+.best-cards .best-card .best-details .best-mid > svg {
+  color: #fff;
+	filter: drop-shadow(1px 0 0 #adb6c5) drop-shadow(0 1px 0 #adb6c5)
+		drop-shadow(-1px 0 0 #adb6c5) drop-shadow(0 -1px 0 #adb6c5);
+}
+.best-cards .best-card .best-details .best-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  justify-content: space-between;
+}
+.best-cards .best-card .best-details .best-bottom span,svg{
+  font-size: 12px;
+  color: #adb6c5;
+}
+.best-cards .best-card .best-details .best-bottom > svg {
+  padding: 5px 4px;
+  border: 1px solid #adb6c5;
   border-radius: 10px;
   cursor: pointer;
 }
