@@ -72,11 +72,12 @@ const Menu = () => {
 
 			<div
 				className="menu-card"
+				id="signout-icon"
 				onMouseEnter={() => handleMouseEnter(5)}
 				onMouseLeave={handleMouseLeave}
 			>
 				{activeMenuItem === 5 && <div className="dot" />}
-				<FontAwesomeIcon icon={faAngleRight} />
+				<FontAwesomeIcon icon={faAngleRight} className="signout-icon"/>
 				<p>Logout</p>
 			</div>
 		</div>
